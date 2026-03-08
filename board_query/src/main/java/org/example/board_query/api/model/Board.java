@@ -1,0 +1,22 @@
+package org.example.board_query.api.model;
+
+import jakarta.persistence.*;
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+
+@Entity
+@Getter @Builder
+@NoArgsConstructor @AllArgsConstructor
+public class Board {
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long idx;
+    @Column(nullable = false, length = 100)
+    private String title;
+    private String contents;
+
+    Long userIdx;
+    String userName;
+}
