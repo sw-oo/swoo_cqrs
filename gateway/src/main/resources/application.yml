@@ -1,3 +1,7 @@
+jwt:
+  secret: ${JWT_SECRET}
+  expire: ${JWT_EXPIRE}
+
 spring:
   application:
     name: gateway
@@ -11,6 +15,8 @@ spring:
               uri: http://localhost:8081
               predicates:
                 - Path=/board/reg, /board/update, /board/delete
+              filters:
+                - JwtFilter
 
             - id: board_query
               uri: http://localhost:8082
