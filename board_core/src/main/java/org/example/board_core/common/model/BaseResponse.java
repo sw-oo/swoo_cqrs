@@ -6,7 +6,6 @@ import lombok.Getter;
 import lombok.Setter;
 import static org.example.board_core.common.model.BaseResponseStatus.SUCCESS;
 
-
 @Getter
 @Setter
 @AllArgsConstructor
